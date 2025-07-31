@@ -7,17 +7,17 @@ const Contact = () => {
     {
       icon: '📍',
       title: 'Visit Our Office',
-      details: '123 Packaging Boulevard<br />Industrial District, City 12345'
+      details: 'KHONDGE WASTI, AMBETHAN, CHAKAN<br />PUNE, Maharashtra, India - 410501'
     },
     {
       icon: '📞',
       title: 'Call Us',
-      details: '+1 (555) 123-4567<br />Mon-Fri 9AM-6PM'
+      details: '+91 (XXX) XXX-XXXX<br />Mon-Fri 9AM-6PM'
     },
     {
       icon: '✉️',
       title: 'Email Us',
-      details: 'info@dreamswoodpackaging.com<br />We reply within 24 hours'
+      details: 'dreamswood2@gmail.com<br />We reply within 24 hours'
     }
   ];
 

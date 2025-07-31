@@ -2,17 +2,115 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Dreamswood Packaging - Premium packaging solutions for your business. Custom designs, sustainable materials, and professional service." />
-    <meta name="keywords" content="packaging, custom boxes, sustainable packaging, graphic design, bulk production, protective packaging" />
+    
+    <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <!-- Critical resource hints -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/images/package-delivery-home.jpg" as="image">
+    
+    <!-- Favicon optimized -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Viewport and responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- SEO optimizations -->
+    <meta name="description" content="Dreamswood Packaging - Premium packaging solutions for your business. Custom designs, sustainable materials, and professional service." />
+    <meta name="keywords" content="packaging, custom boxes, sustainable packaging, graphic design, bulk production, protective packaging" />
+    <meta name="author" content="Dreamswood Packaging Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.dreamswoodpackaging.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dreamswoodpackaging.com/">
+    <meta property="og:title" content="Dreamswood Packaging - Premium Packaging Solutions">
+    <meta property="og:description" content="Custom packaging solutions with sustainable materials and professional service.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dreamswoodpackaging.com/">
+    <meta property="twitter:title" content="Dreamswood Packaging - Premium Packaging Solutions">
+    <meta property="twitter:description" content="Custom packaging solutions with sustainable materials and professional service.">
+    <meta property="twitter:image" content="/images/twitter-image.jpg">
+    
+    <!-- Critical CSS inline (will be added by build process) -->
+    <style>
+      /* Critical above-the-fold styles */
+      body { margin: 0; font-family: 'Montserrat', sans-serif; }
+      .loading-initial { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        background: #f8f9fa;
+      }
+    </style>
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Theme color -->
+    <meta name="theme-color" content="#3045e6">
+    <meta name="msapplication-TileColor" content="#3045e6">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
     <title>Dreamswood Packaging - Premium Packaging Solutions</title>
+    
+    <!-- Font fallback for slow connections -->
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Initial loading state -->
+    <div id="root">
+      <div class="loading-initial">
+        <div style="width: 40px; height: 40px; border: 3px solid #f3f3f3; border-top: 3px solid #3045e6; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+      </div>
+    </div>
+    
+    <!-- Main application script -->
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => console.log('SW registered'))
+            .catch(error => console.log('SW registration failed'));
+        });
+      }
+    </script>
+    
+    <!-- Critical resource optimization -->
+    <script>
+      // Preload critical resources
+      const criticalResources = [
+        '/src/styles/App.css',
+        '/src/components/Layout/Navigation.jsx'
+      ];
+      
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'modulepreload';
+        link.href = resource;
+        document.head.appendChild(link);
+      });
+    </script>
   </body>
 </html>

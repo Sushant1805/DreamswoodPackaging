@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SocialLink from '../UI/SocialLink';
+import PrivacyPolicyModal from '../UI/PrivacyPolicyModal';
+import TermsOfServiceModal from '../UI/TermsOfServiceModal';
+import CookiePolicyModal from '../UI/CookiePolicyModal';
 
 const Footer = () => {
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+  const [isCookieModalOpen, setIsCookieModalOpen] = useState(false);
+
   const socialLinks = [
     {
       href: '#',
@@ -53,12 +60,6 @@ const Footer = () => {
       { text: 'Portfolio', href: '#portfolio' },
       { text: 'Contact', href: '#contact' },
       { text: 'Careers', href: '#' }
-    ],
-    resources: [
-      { text: 'Design Guide', href: '#' },
-      { text: 'Material Specs', href: '#' },
-      { text: 'FAQ', href: '#' },
-      { text: 'Blog', href: '#' }
     ]
   };
 
@@ -95,26 +96,47 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="footer-column">
-              <h4>Resources</h4>
-              <ul>
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}><a href={link.href}>{link.text}</a></li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2025 Dreamswood Packaging. All rights reserved.</p>
+          <p>&copy; 2025 Dreamswood Packaging Private Limited. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
+            <button 
+              onClick={() => setIsPrivacyModalOpen(true)}
+              className="policy-link"
+            >
+              Privacy Policy
+            </button>
+            <button 
+              onClick={() => setIsTermsModalOpen(true)}
+              className="policy-link"
+            >
+              Terms of Service
+            </button>
+            <button 
+              onClick={() => setIsCookieModalOpen(true)}
+              className="policy-link"
+            >
+              Cookie Policy
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Policy Modals */}
+      <PrivacyPolicyModal 
+        isOpen={isPrivacyModalOpen} 
+        onClose={() => setIsPrivacyModalOpen(false)} 
+      />
+      <TermsOfServiceModal 
+        isOpen={isTermsModalOpen} 
+        onClose={() => setIsTermsModalOpen(false)} 
+      />
+      <CookiePolicyModal 
+        isOpen={isCookieModalOpen} 
+        onClose={() => setIsCookieModalOpen(false)} 
+      />
     </footer>
   );
 };

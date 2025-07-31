@@ -1,32 +1,23 @@
 import React from 'react';
 import PortfolioItem from '../UI/PortfolioItem';
-import { IMAGES } from '../../utils/constants';
 
 const Portfolio = () => {
   const portfolioItems = [
     {
-      category: 'Beauty Products',
       title: 'Luxury Cosmetics Box',
-      description: 'Premium packaging for high-end beauty brand',
-      image: IMAGES.portfolio.cosmetics
+      description: 'Premium packaging for high-end beauty brand'
     },
     {
-      category: 'Food & Beverage',
       title: 'Organic Food Packaging',
-      description: 'Sustainable packaging for organic products',
-      image: IMAGES.portfolio.food
+      description: 'Sustainable packaging for organic products'
     },
     {
-      category: 'Electronics',
       title: 'Tech Device Box',
-      description: 'Protective packaging for electronic devices',
-      image: IMAGES.portfolio.electronics
+      description: 'Protective packaging for electronic devices'
     },
     {
-      category: 'Fashion',
       title: 'Clothing Brand Box',
-      description: 'Elegant packaging for fashion retailers',
-      image: IMAGES.portfolio.fashion
+      description: 'Elegant packaging for fashion retailers'
     }
   ];
 

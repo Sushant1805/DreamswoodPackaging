@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navigation = ({ isScrolled, isMobileMenuOpen, setIsMobileMenuOpen }) => {
+const Navigation = ({ isScrolled, isMobileMenuOpen, setIsMobileMenuOpen, onGetQuoteClick }) => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
@@ -16,7 +16,7 @@ const Navigation = ({ isScrolled, isMobileMenuOpen, setIsMobileMenuOpen }) => {
           <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
         </ul>
         <div className="nav-cta">
-          <button className="btn-cta">Get Quote</button>
+          <button className="btn-cta" onClick={onGetQuoteClick}>Get Quote</button>
         </div>
         <div 
           className={`nav-toggle ${isMobileMenuOpen ? 'active' : ''}`}

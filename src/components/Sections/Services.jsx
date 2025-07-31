@@ -31,7 +31,8 @@ const Services = () => {
     {
       icon: '🚚',
       title: 'Bulk Orders',
-      description: 'Cost-effective bulk manufacturing with reliable delivery schedules.'
+      description: 'Cost-effective bulk manufacturing with reliable delivery schedules.',
+      image: IMAGES.services.bulkOrders
     },
     {
       icon: '🛡️',
@@ -42,7 +43,10 @@ const Services = () => {
     {
       icon: '📏',
       title: 'Custom Specifications',
-      description: 'Manufacturing to precise measurements and dimensions to meet your requirements.'
+      description: 'Manufacturing to precise measurements and dimensions to meet your requirements.',
+      image: IMAGES.services.custom
+
+    
     }
   ];
 

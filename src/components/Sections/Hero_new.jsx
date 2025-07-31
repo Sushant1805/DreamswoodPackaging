@@ -9,9 +9,6 @@ const Hero = () => {
       </div>
       <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-badge">
-            <span>🏭 Professional Manufacturing</span>
-          </div>
           <h1>
             Professional Packaging
             <span className="highlight"> Manufacturing</span>

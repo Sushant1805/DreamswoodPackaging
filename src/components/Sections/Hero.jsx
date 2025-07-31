@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero = () => {
+const Hero = ({ onGetQuoteClick }) => {
   return (
     <section id="home" className="hero">
       <div className="hero-background">
@@ -8,9 +8,7 @@ const Hero = () => {
       </div>
       <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-badge">
-            <span>🏭 Professional Manufacturing</span>
-          </div>
+    
           <h1>
             Professional Packaging
             <span className="highlight"> Manufacturing</span>
@@ -19,11 +17,11 @@ const Hero = () => {
           <p>We manufacture high-quality, durable packaging solutions using sustainable materials that ensure your products reach customers safely and securely.</p>
           <div className="hero-stats">
             <div className="stat-item">
-              <strong>500+</strong>
+              <strong>100+</strong>
               <span>Happy Clients</span>
             </div>
             <div className="stat-item">
-              <strong>10M+</strong>
+              <strong>10K+</strong>
               <span>Packages Delivered</span>
             </div>
             <div className="stat-item">
@@ -32,11 +30,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-buttons">
-            <button className="btn-primary">Start Your Project</button>
-            <button className="btn-secondary">
-              <span className="play-icon">▶</span>
-              Watch Demo
-            </button>
+            <button className="btn-primary" onClick={onGetQuoteClick}>Get Quote</button>
           </div>
         </div>
         <div className="hero-visual">

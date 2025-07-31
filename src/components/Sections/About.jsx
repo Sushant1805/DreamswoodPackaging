@@ -39,12 +39,9 @@ const About = () => {
           <div className="about-visual">
             <div className="about-image-container">
               <div className="about-image" style={{backgroundImage: `url(${IMAGES.about.manufacturing})`}}>
-                <span>Our Manufacturing Process</span>
+                
               </div>
-              <div className="experience-badge">
-                <strong>10+</strong>
-                <span>Years Experience</span>
-              </div>
+        
             </div>
           </div>
         </div>

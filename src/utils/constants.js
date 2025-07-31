@@ -7,7 +7,7 @@ export const IMAGES = {
     factory: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&h=400&fit=crop&crop=center'
   },
   about: {
-    manufacturing: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=500&h=400&fit=crop&crop=center',
+    manufacturing: 'https://imgs.search.brave.com/gu_4ugHgiHg7Yo06wQaVanEj38HDjmb0dB12hyAQMLk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbmRp/YXBhY2suY28uaW4v/d3AtY29udGVudC91/cGxvYWRzLzIwMTgv/MTEvYmcyLmpwZw',
     quality: 'https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=500&h=400&fit=crop&crop=center'
   },
   portfolio: {
@@ -17,10 +17,12 @@ export const IMAGES = {
     fashion: 'https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=400&h=300&fit=crop&crop=center'
   },
   services: {
-    boxManufacturing: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=300&h=200&fit=crop&crop=center',
-    volumeProduction: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=300&h=200&fit=crop&crop=center',
-    sustainable: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=300&h=200&fit=crop&crop=center',
-    protective: 'https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=300&h=200&fit=crop&crop=center'
+    boxManufacturing: 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/591ee23f-db4a-43ad-9b26-9fc56f856404.png',
+    volumeProduction: 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/4eb9809f-f902-4d9c-8b1c-23e26cd55635.png',
+    sustainable: 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/080141b1-b7eb-4c54-b4be-4d0c429aeddd.png',
+    protective: 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8132acda-9454-4741-9d49-4a0a43a42da4.png',
+    bulkOrders : 'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/c949577c-b3c4-4014-8359-1ba2565a8925.png',
+    custom:'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/21bf193b-234b-48b5-a1da-dd6b76967ff9.png'
   }
 };
 
@@ -41,12 +43,12 @@ export const NAV_LINKS = [
 
 // Company information
 export const COMPANY_INFO = {
-  name: 'Dreamswood Packaging',
-  phone: '+1 (555) 123-4567',
-  email: 'info@dreamswoodpackaging.com',
+  name: 'Dreamswood Packaging Private Limited',
+  phone: '+91 (XXX) XXX-XXXX',
+  email: 'dreamswood2@gmail.com',
   address: {
-    street: '123 Packaging Boulevard',
-    city: 'Industrial District, City 12345'
+    street: 'KHONDGE WASTI, AMBETHAN, CHAKAN',
+    city: 'PUNE, Maharashtra, India - 410501'
   },
   hours: 'Mon-Fri 9AM-6PM',
   responseTime: 'We reply within 24 hours'

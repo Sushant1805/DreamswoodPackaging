@@ -28,7 +28,6 @@ const ServiceCard = ({ service, featured = false }) => {
           ))}
         </ul>
       )}
-      <button className="service-btn">Learn More</button>
     </div>
   );
 };
